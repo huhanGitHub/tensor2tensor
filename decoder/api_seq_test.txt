@@ -1,0 +1,10 @@
+AbstractElement.copyAttributes
+AbstractElement.getAttribute
+AbstractElement.getAttributeNames
+AbstractElement.containsAttribute
+AbstractElement.containsAttributes
+AbstractElement.getResolveParent
+AbstractElement.addAttribute
+AbstractElement.addAttributes
+AbstractElement.removeAttribute
+AbstractElement.removeAttributes

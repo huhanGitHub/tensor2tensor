@@ -1,0 +1,54 @@
+/home/huhan/20g_disk_d/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+INFO:tensorflow:Importing user module self_script from path /home/huhan/20g_disk_d/python/projects/tensor2tensor
+WARNING:tensorflow:From /home/huhan/20g_disk_d/anaconda3/lib/python3.6/site-packages/tensor2tensor/utils/trainer_lib.py:198: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+INFO:tensorflow:schedule=continuous_train_and_eval
+INFO:tensorflow:worker_gpu=1
+INFO:tensorflow:sync=False
+WARNING:tensorflow:Schedule=continuous_train_and_eval. Assuming that training is running on a single machine.
+INFO:tensorflow:datashard_devices: ['gpu:0']
+INFO:tensorflow:caching_devices: None
+INFO:tensorflow:ps_devices: ['gpu:0']
+INFO:tensorflow:Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fb713ec3b00>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': None, '_log_step_count_steps': 100, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+  }
+}
+, '_save_checkpoints_steps': 1000, '_keep_checkpoint_max': 20, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './train', 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7fb713ec38d0>}
+WARNING:tensorflow:Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7fb713645b70>) includes params argument, but params are not passed to Estimator.
+WARNING:tensorflow:ValidationMonitor only works with --schedule=train_and_evaluate
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps 1000 or save_checkpoints_secs None.
+INFO:tensorflow:Reading data files from ./data/my_problem-train*
+INFO:tensorflow:partition: 0 num_data_files: 9
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Setting T2TModel mode to 'train'
+INFO:tensorflow:Using variable initializer: uniform_unit_scaling
+INFO:tensorflow:Transforming feature 'inputs' with symbol_modality_2061_512.bottom
+WARNING:tensorflow:From /home/huhan/20g_disk_d/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/function.py:986: calling Graph.create_op (from tensorflow.python.framework.ops) with compute_shapes is deprecated and will be removed in a future version.
+Instructions for updating:
+Shapes are always computed; don't use the compute_shapes as it has no effect.
+INFO:tensorflow:Transforming 'targets' with symbol_modality_2061_512.targets_bottom
+INFO:tensorflow:Building model body
+INFO:tensorflow:Transforming body output with symbol_modality_2061_512.top
+INFO:tensorflow:Base learning rate: 2.000000
+INFO:tensorflow:Trainable Variables Total size: 11612674
+INFO:tensorflow:Using optimizer Adam
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-08-27 07:47:40.891746: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+INFO:tensorflow:Restoring parameters from ./train/model.ckpt-0
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into ./train/model.ckpt.
+INFO:tensorflow:loss = 7.159974, step = 1
+Killed

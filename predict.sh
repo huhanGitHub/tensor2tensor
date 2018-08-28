@@ -1,0 +1,1 @@
+t2t-decoder --t2t_usr_dir=self_script --problem=my_problem --data_dir=./data --model=universal_transformer_encoder --hparams_set=adaptive_universal_transformer_tiny_d02 --hparams='batch_size=512' --output_dir=./train --decode_hparams="beam_size=4,alpha=0.6" --decode_from_file=decoder/api_seq_test.txt --decode_to_file=decoder/api_seq_test_result.txt
